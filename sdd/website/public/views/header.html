@@ -11,17 +11,14 @@
             <span class = "icon-bar"></span>
             </button>
         
-            <button type = "button" class = "navbar-toggle collapsed" 
-             data-toggle = "collapse" data-target = "#search-box">
-                <span class="glyphicon glyphicon-search" style="color:white" aria-hidden="true"></span> 
-            </button> 
+            
         </div>
 
         
 
         <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <div class = "collapse navbar-collapse" id = "bar-collapse">
-        <ul class = "nav navbar-nav">
+        <ul class = "nav navbar-nav" id="menu">
             <li><a href = "/nerds">Events</a></li>
             <li class = "dropdown">
             <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
@@ -39,6 +36,12 @@
         <li><a href = "#">Logout</a></li>
 
         </ul>
+
+        <button type = "button" class = "navbar-toggle collapsed" 
+             data-toggle = "collapse" data-target = "#search-box">
+            <span class="glyphicon glyphicon-search" style="color:white" aria-hidden="true"></span> 
+        </button> 
+
 		<div class = "collapse navbar-collapse" id = "search-box">
                 <form class = "navbar-form navbar-right" role = "search">
                     <div class = "form-group">
