@@ -1,5 +1,6 @@
 // public/js/app.js
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'app-directives']);
+angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'EventCtrl', 'NerdService', 'app-directives']);
 
-$(function(){   $("#modal-wrapper").load("/views/modal.html");  });
+$(function(){   $("#login-modal-wrapper").load("/views/modal/login.html");  });
+$(function(){   $("#view-modal-wrapper").load("/views/modal/view-event.html");  });
 

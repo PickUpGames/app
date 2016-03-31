@@ -20,7 +20,7 @@
 
     <!-- ANGULAR CUSTOM -->
     <script src="js/controllers/MainCtrl.js"></script>
-    <script src="js/controllers/NerdCtrl.js"></script>
+    <script src="js/controllers/EventCtrl.js"></script>
     <script src="js/services/NerdService.js"></script>
     <script src="libs/angular/directives.js"></script>
     <script src="js/appRoutes.js"></script>
@@ -28,7 +28,7 @@
     
 
 </head>
-<body ng-app="sampleApp" ng-controller="NerdController">
+<body ng-app="sampleApp" ng-controller="EventController">
 <div class="container">
 
     <!-- HEADER, loaded from view/header.html -->
@@ -38,6 +38,7 @@
     <div ng-view></div>
 
 </div>
-<div id="modal-wrapper"></div>
+<div id="login-modal-wrapper"></div>
+<div id="view-modal-wrapper"></div>
 </body>
 </html>
