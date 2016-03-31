@@ -10,10 +10,22 @@
         })
 
         // nerds page that will use the NerdController
-        .when('/nerds', {
+        .when('/events', {
             templateUrl: 'views/nerd.html',
             controller: 'NerdController'
-        });
+        })
+        .when('/viewprofile',{
+            templateUrl: 'views/viewprofile.html'
+        })
+        .when('/manageprofile',{
+            templateUrl: 'views/manageprofile.html'
+        })
+        .when('/contactprofile',{
+            templateUrl: 'views/contactprofile.html'
+        })
+        .when('/faqprofile',{
+            templateUrl: 'views/faqprofile.html'
+        })
 
     $locationProvider.html5Mode(true);
 
