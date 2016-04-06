@@ -1,4 +1,15 @@
 <div class="jumbotron text-center">
     <h1>FAQ</h1>
+    
+    <div ng-repeat="btn in ['btn1', 'btn2', 'btn3', 'btn4']">
+     <span class="glyphicon glyphicon-plus" ng-click="btn = !btn"style="color:green;" aria-hidden="true"> 
+     	Question</span> 
 
+    <div ng-show="!btn">
+    		<br>
+    		The answer to the universe and everything is 42. 
+	</div>
+	<br>
+    </div>
+    
 </div>

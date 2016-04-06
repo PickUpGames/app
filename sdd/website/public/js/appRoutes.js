@@ -25,6 +25,7 @@
         })
         .when('/faq',{
             templateUrl: 'views/profile/faq.html'
+
         })
         .when('/login',{
             templateUrl: '/views/modal/login.html'
