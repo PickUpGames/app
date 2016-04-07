@@ -92,13 +92,13 @@ app.get('/lol', function(req,res){
    });
 });
 
-function createUser(name, username, password, passwordConfirmation, birthday, callback){
+function createUser(name, usrname, password, passwordConfirmation, birthday, callback){
 	if(password != passwordConfirmation){
 		var err = 'Passwords do not match';
 		callback(err);
 	}
 	else {
-		var query = {username: username};
+		var query = {username: usrname};
 
 		User.findOne(query, function(err,user){
 			if(user) {
@@ -108,7 +108,7 @@ function createUser(name, username, password, passwordConfirmation, birthday, ca
 			else {
 				var userData = {
 					name: name,
-					username: username,
+					username: usrname,
 					password: password,
 					birthday: birthday
 				};
