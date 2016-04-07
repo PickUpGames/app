@@ -154,7 +154,7 @@ app.post('/login', function(req, res){
       req.session.username = user.username;
       res.redirect('/');
     } else {
-      res.render('login', {badCredentials: true});
+      res.render('/modal/login', {badCredentials: true});
     }
   });
 });
