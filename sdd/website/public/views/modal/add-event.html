@@ -9,12 +9,26 @@
         
         <div class="modal-header" style="padding:10px 20px;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4> Something </h4>
+          <h4> Add an event! </h4>
         </div>
         
         <div class="modal-body" style="padding:20px 20px;">
+		<h5> Fill out the details and start planning the fun! </h5>
+		<div class="form-group">
+		<form>
+			<input type="text" ng-model="eventName" placeholder = "Event Name">
+		</form>
+		<form>
+			<input type="text" ng-model="eventHost" placeholder = "Event Host">
+		</form>
+		<form>
+			<input type="text" ng-model="eventCapacity" placeholder = "Event Capacity">
+		</form>
+		<form>
+			<input type="text" ng-model="eventLocation" placeholder = "Event Location">
+		</form>
         </div>
-        
+        </div>
         <div class="modal-footer">
         </div>  
 
