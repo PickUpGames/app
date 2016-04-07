@@ -1,14 +1,59 @@
 <div class="jumbotron text-center">
-    <h1>Viewprofile</h1>
-
-    <br> Account Info
-
-	<br>Edit Account Information
-	<br>Edit Preferences 
-	<br>Edit Registered Events 
-	<br>History of events
-	<br>Delete Account
-
-
+    <h1>John Smith</h1>
 
 </div>
+
+<div ng-app="" ng-init="choice='view'">
+	<div  class="col-xs-4 col-sm-4 col-md-3 list-group">
+    	<a href="#" ng-click="choice='view'" ng-class="{'active': choice=='view'}" class= "list-group-item active">View Account Info</a>
+    	<a href="#" ng-click="choice='editA'" ng-class="{'active': choice=='editA'}" class= "list-group-item">Edit Account Info</a>
+    	<a href="#" ng-click="choice='editP'" ng-class="{'active': choice=='editP'}" class= "list-group-item">Edit Preferences </a>
+    	<a href="#" ng-click="choice='editR'" ng-class="{'active': choice=='editR'}" class= "list-group-item">Edit Registered Events</a>
+    	<a href="#" ng-click="choice='hist'" ng-class="{'active': choice=='hist'}" class= "list-group-item">History of Events</a>
+    	<a href="#" ng-click="choice='del'" ng-class="{'active': choice=='del'}" class= "list-group-item">Delete Account</a>
+
+	</div>
+
+    <div class="col-xs-8 col-sm-8 col-md-9" >
+    	<div ng-show="choice=='view'" id="view-profile">
+    		<h4><span class="glyphicon glyphicon-user" style="color:green;"></span> Name: John Smith</h4>
+    		<h4><span class="glyphicon glyphicon-user"></span> Username: JSmith</h4>
+    		<h4><span class="glyphicon glyphicon-time"></span> Birthday: 1/1/1989</h4>
+    		<h4><span class="glyphicon glyphicon-road"></span> Location: 12180</h4>
+    	</div>
+    	   	<div ng-show="choice=='editA'" id="view-profile">
+    	   		<form role="form">
+            		<div class="form-group">
+            			<label for="name"><span class="glyphicon glyphicon-user" style="color:green;"></span>Name</label>
+              			<input type="text" class="form-control" id="name" value="John Smith"> 
+            		</div>
+            		<div class="form-group">
+            			<label for="usrname"><span class="glyphicon glyphicon-user"></span>Username</label>
+              			<input type="text" class="form-control" id="usrname" value="JSmith"> 
+            		</div>
+            		<div class="form-group">
+            			<label for="b-day"><span class="glyphicon glyphicon-time"></span>Birthday</label>
+              			<input type="date" class="form-control" id="b-day" value="1989-01-01"> 
+            		</div>
+            		<div class="form-group">
+            			<label for="loc"><span class="glyphicon glyphicon-road" ></span>Location</label>
+              			<input type="text" class="form-control" id="loc" value="12180"> 
+            		</div>
+               		<button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-ok"></span> Edit</button>
+          		</form>
+    		</div>
+    		<div ng-show="choice=='editP'" id="view-profile">
+    			Preferences in progress
+    		</div>	
+    		<div ng-show="choice=='editR'" id="view-profile">
+    			Registered in progress
+    		</div>
+    		<div ng-show="choice=='hist'" id="view-profile">
+    			History in progress
+    		</div>
+    		<div ng-show="choice=='del'" id="view-profile">
+    			Delete in progress
+    		</div>
+    	</div>
+    </div>
+</div> 
