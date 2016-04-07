@@ -107,8 +107,8 @@ function createUser(name, usrname, password, passwordConfirmation, birthday, cal
 			}
 			else {
 				var userData = {
-					name: name,
 					username: usrname,
+					name: name,
 					password: password,
 					birthday: birthday
 				};
@@ -184,7 +184,6 @@ app.post('/event/create', function(req,res){
 		var eventDescription = req.body.eventDescription;
 		var guests = req.body.guests;
 		var maxGuests = req.body.maxGuests;
-
 		createEvent(username,location, eventType, eventDescription,guests,maxGuests,function(err,event){
 			if(err){
 				res.render('error', {error:err});
