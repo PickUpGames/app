@@ -138,8 +138,8 @@ app.post('/signup', function(req,res){
 	});
 });
 
-function authenticateUser(username, password, callback){
-  User.findOne({username: username, password:password}, function(err, user){
+function authenticateUser(usrname, password, callback){
+  User.findOne({username: usrname, password:password}, function(err, user){
     callback(err, user);
   });
 }
