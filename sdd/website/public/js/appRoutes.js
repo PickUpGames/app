@@ -30,6 +30,9 @@
         .when('/login',{
             templateUrl: '/views/modal/login.html'
         })
+        .when('/add',{
+            templateUrl: '/views/modal/add.html'
+        })
 
     $locationProvider.html5Mode(true);
 
