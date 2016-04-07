@@ -51,7 +51,8 @@
             
          </li>
          
-        <li><a href = "#" data-toggle="modal" data-target="#login-modal" >Login</a></li>
+        <li><a href = "#"  ng-show = "!isUserLoggedIn" data-toggle="modal" data-target="#login-modal" >Login</a></li>
+        <li><a href = "#" ng-show = "isUserLoggedIn" data-toggle="modal" data-target="#logout-modal" >Logout</a></li>
 
 
         </ul>
