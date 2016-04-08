@@ -41,12 +41,9 @@
             
          </li>
 
-            {{#if user}}
-                Logged in as: <b>{{user.username}}</b>.
-                <a href='/logout'>Logout</a>
-                {{else}}
+                <li>
                 <a href = "#"  ng-show = "!isUserLoggedIn" data-toggle="modal" data-target="#login-modal" >Login</a>
-            {{/if}}
+        
         </li>
 
 

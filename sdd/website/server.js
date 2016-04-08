@@ -73,6 +73,7 @@ app.get('/', function(req, res){
 
 app.get('/login', function(req, res){
   res.render('login');
+
 });
 
 app.get('/logout', function(req, res){
@@ -80,12 +81,19 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
+
+app.get('/events', function(req, res){
+  console.log(req.params.msg);
+  eventData = Event.find({}).toArray();
+  res.render('events', eventData);
+});
+
 app.get('/not_allowed', function(req, res){
   res.render('not_allowed');
 });
 
 app.get('/lol', function(req,res){
-  User.find({}).exec(function(err,users){
+  events.find({}).exec(function(err,users){
   		if(err)
   			return console.log(err);
     	res.render('home', {users:users});
@@ -154,7 +162,7 @@ app.post('/login', function(req, res){
       req.session.username = user.username;
       res.redirect('/');
     } else {
-      res.render('/modal/login', {badCredentials: true});
+      res.render('login', {badCredentials: true});
     }
   });
 });
